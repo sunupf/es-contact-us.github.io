@@ -21,16 +21,23 @@
           <span>Solve.</span>
         </div>
       </h1>
-      <p>
+      <p class="subtitle">
         We design something that <b>Understandable</b> for users, <b>Applicable</b> for the tech team,<br> and--the last but not least--<b>Solve</b> the problem.
       </p>
       <a href="#contact-us" class="button cta">Contact Us</a>
     </div>
+    
+    <!-- Modal Contact Us -->
     <div id="contact-us" class="modal">
       <div class="modal-card">
         <div class="header">
           <h3>Contact Us</h3>
-          <img src="assets/icon-close.svg" alt="Close Modal">
+          <a href="#" class="close-modal">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="32" height="32" fill="white"/>
+              <path d="M25.3848 8.41421L23.9706 7L16.1923 14.7783L8.41421 7.00014L7 8.41435L14.7781 16.1925L7.00003 23.9706L8.41424 25.3848L16.1923 17.6067L23.9706 25.3849L25.3848 23.9707L17.6065 16.1925L25.3848 8.41421Z" fill="#C4C4C4"/>
+            </svg>
+          </a>
         </div>
         <div class="body">
           <form>
@@ -44,7 +51,7 @@
             </div>
             <div class="form-group">
               <input type="text" id="contact-email" placeholder="Type your email here...">
-              <label for="contact-email">Name</label>
+              <label for="contact-email">Email</label>
             </div>
             <div class="form-group">
               <textarea rows="4" id="contact-message" placeholder="Type your message here..."></textarea>
@@ -52,6 +59,55 @@
             </div>
             <button class='button'>Send Message</button>
           </form>
+          <div class="progress">
+            <div class="illustration">
+              <svg class="amplop" width="160" height="157" viewBox="0 0 160 157" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 51L80 0.5L160 51V51.5H0V51Z" fill="#CDCDCD"/>
+                <path d="M0 51.5H160V155C160 156.105 159.105 157 158 157H2C0.895429 157 0 156.105 0 155V51.5Z" fill="#CDCDCD"/>
+                <rect x="34" width="92" height="111" fill="white"/>
+                <path d="M80 71C88.2843 71 95 64.2843 95 56C95 47.7157 88.2843 41 80 41C71.7157 41 65 47.7157 65 56C65 64.2843 71.7157 71 80 71Z" fill="#FFCC00"/>
+                <path d="M79.9973 56C77.356 56.0038 74.7621 56.6987 72.4756 58.015C70.1891 59.3313 68.2904 61.2228 66.9697 63.5C68.2903 65.7771 70.1891 67.6686 72.4755 68.9849C74.762 70.3013 77.3558 70.9962 79.9971 71C82.6394 70.9972 85.2345 70.3028 87.522 68.9864C89.8096 67.67 91.7092 65.7779 93.0303 63.5C91.7092 61.222 89.8096 59.3299 87.522 58.0135C85.2345 56.6972 82.6395 56.0028 79.9973 56Z" fill="#FF7F2A"/>
+                <path d="M0 52L80 102.5L0 153V52Z" fill="#EB7527"/>
+                <path d="M0 153L160 52V155C160 156.105 159.105 157 158 157H2C0.895429 157 0 156.105 0 155V153Z" fill="#FF7F2A"/>
+              </svg>
+              <div class="clouds">
+                <svg class="top cloud" width="164" height="44" viewBox="0 0 164 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.473 44C0.473 44 -2.10223 38.8864 4.76505 35.4773C10.7739 32.4943 15.066 38.8864 15.066 38.8864C15.066 38.8864 12.1249 32.7504 20.2164 27.8066C25.7961 24.3974 32.2342 27.8066 32.2342 27.8066C32.2342 27.8066 29.5434 21.1712 36.097 18.4315C43.4128 15.3732 45.8927 21.2318 46.3255 22.4698C45.6309 20.2347 40.6481 1.92989 63.1369 0.107272C84.1679 -1.5972 85.4555 17.5791 85.4555 17.5791C85.4555 17.5791 89.6171 12.8091 98.7609 16.3008C109.92 20.5622 107.774 29.5113 107.774 29.5113C107.774 29.5113 115.071 24.4922 126.23 26.9544C136.96 29.3219 147.261 39.7386 147.261 39.7386C153.996 37.8792 157.656 38.8529 164 44H0.473Z" fill="white"/>
+                </svg>
+                  
+                <svg class="middle cloud" width="86" height="23" viewBox="0 0 86 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.248037 23C0.248037 23 -1.10239 20.327 2.49874 18.5449C5.64974 16.9857 7.90044 20.327 7.90044 20.327C7.90044 20.327 6.3582 17.1195 10.6013 14.5352C13.5272 12.7532 16.9033 14.5352 16.9033 14.5352C16.9033 14.5352 15.4923 11.0668 18.9289 9.63466C22.7652 8.03599 24.0656 11.0983 24.2927 11.7455C23.9284 10.5771 21.3155 1.0088 33.1084 0.0560743C44.1368 -0.834903 44.812 9.18909 44.812 9.18909C44.812 9.18909 46.9943 6.69564 51.7892 8.52088C57.6411 10.7484 56.5157 15.4263 56.5157 15.4263C56.5157 15.4263 60.3419 12.8028 66.1938 14.0898C71.8205 15.3273 77.2222 20.7724 77.2222 20.7724C80.7538 19.8005 82.6731 20.3094 86 23H0.248037Z" fill="white"/>
+                </svg>
+                <svg class="bottom cloud" width="86" height="23" viewBox="0 0 86 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M85.752 23C85.752 23 87.1024 20.327 83.5013 18.5449C80.3503 16.9857 78.0996 20.327 78.0996 20.327C78.0996 20.327 79.6418 17.1195 75.3987 14.5352C72.4728 12.7532 69.0967 14.5352 69.0967 14.5352C69.0967 14.5352 70.5077 11.0668 67.0711 9.63466C63.2348 8.03599 61.9344 11.0983 61.7073 11.7455C62.0716 10.5771 64.6845 1.0088 52.8916 0.0560743C41.8632 -0.834903 41.188 9.18909 41.188 9.18909C41.188 9.18909 39.0057 6.69564 34.2108 8.52088C28.3589 10.7484 29.4843 15.4263 29.4843 15.4263C29.4843 15.4263 25.6581 12.8028 19.8062 14.0898C14.1795 15.3273 8.77776 20.7724 8.77776 20.7724C5.24624 19.8005 3.32692 20.3094 0 23H85.752Z" fill="white"/>
+                </svg>
+              </div>
+              <svg class="landscape" width="360" height="76" viewBox="0 0 360 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0)">
+                  <path d="M17 8.5L8 49.5H4L43 66L69 58C66.3333 49.8333 60.7 32.8 59.5 30C58.3 27.2 55 45.1667 53.5 54.5L43 49.5L36.5 22.5L27.5 49.5L17 8.5Z" fill="#27AE60"/>
+                  <path d="M288 0L279 41H275L314 57.5C368.572 40.7087 314.287 41.1365 314 41L307.5 14L298.5 41L288 0Z" fill="#27AE60"/>
+                  <path d="M39 67.3246C148.316 1.24677 228.988 29.3336 348 81.3247L83.5 111.825L39 67.3246Z" fill="#F8B080"/>
+                  <path d="M-10.5 42.5C118.692 54.5124 192.083 57.0946 311.5 105L-4 133.5L-10.5 42.5Z" fill="#FFA76D"/>
+                  <path d="M102 75.9995H360V41.3294C246.41 21.2327 102 75.9995 102 75.9995Z" fill="#FFB787"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0">
+                    <rect width="360" height="76" fill="white"/>
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <div class="status">
+              <svg width="62" height="21" viewBox="0 0 62 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle class="first" cx="11" cy="10" r="6" fill="white"/>
+                <circle class="second" opacity="0.2" cx="31" cy="10" r="6" fill="white"/>
+                <circle class="third" opacity="0.2" cx="51" cy="10" r="6" fill="white"/>
+              </svg>
+              <p>
+                Sending Message
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
