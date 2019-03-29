@@ -67,7 +67,7 @@ inputs.forEach(function(input) {
 
 function startSending() {
   var envelope = document.querySelector('.flying-envelope');
-  envelope.styles.display = "block";
+  envelope.style.display = "block";
   var path = anime.path('.envelope-path path');
 
   anime({
