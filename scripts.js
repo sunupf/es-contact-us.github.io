@@ -18,6 +18,7 @@ var openButton = document.querySelector('a.button');
 var closeButton = document.querySelector('.close-modal');
 var inputs = document.querySelectorAll('input, textarea');
 var modalContact = document.querySelector('#contact-us');
+var contactUsSubmit = document.querySelector('#contact-us form');
 
 
 openButton.addEventListener('click', function() {
@@ -32,6 +33,12 @@ modalContact.addEventListener('click', function(e) {
   if (e.target.id == "contact-us") {
     modalContact.classList.remove('modal__open')
   }
+})
+
+contactUsSubmit.addEventListener('submit',function(e) {
+  var contactProgress = document.querySelector('#contact-us .progress');
+  contactProgress.classList.add('progress__open');
+  e.preventDefault();
 })
 
 

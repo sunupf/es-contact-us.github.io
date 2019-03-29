@@ -169,6 +169,13 @@ button.button {
   outline: none;
   border: 0;
   font-weight: 600;
+  cursor: pointer;
+}
+
+.button:hover {
+  transition : all 0.32s ease-out;
+  transform: translateY(-2px);
+  box-shadow: 0 0 8px rgba(28,25,24,0.25)
 }
 
 .modal .progress {
@@ -176,12 +183,16 @@ button.button {
   top: 0;
   left: 0;
   width: 100%;
-  display: flex;
-  flex-direction: column;
   height: 100%;
+  display: none;
+  flex-direction: column;
   border-radius: 16px;
   overflow: hidden;
   font-family: 'Metropolis', sans-serif;
+}
+
+.modal .progress.progress__open {
+  display: flex;
 }
 
 .modal .illustration {
@@ -190,11 +201,37 @@ button.button {
   position: relative;
 }
 
-.modal .illustration .amplop {
+.progress__open .illustration {
+  animation-name: zoomInIllustration;
+  animation-fill-mode: both;
+  animation-duration: 0.22s;
+  animation-delay: 0.12s;
+  opacity: 0;
+  animation-timing-function: ease-in-out;
+  overflow: hidden;
+}
+
+.modal .illustration .surat {
   top: 50%;
   position: absolute;
   transform: translate(-50%,-50%);
   left: 50%;
+}
+
+.surat .message {
+  animation-name: insertPaper;
+  animation-fill-mode: both;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.64s;
+}
+
+.surat .amplop {
+  animation-name: feedbackBump;
+  animation-fill-mode: both;
+  animation-duration: 0.35s;
+  animation-timing-function: ease-out;
+  animation-delay: 0.80s;
 }
 
 .clouds .top {
@@ -232,15 +269,49 @@ button.button {
   bottom: 0;
 }
 
-.modal .status {
+.progress .status {
   flex: 0 0 158px;
-  background-color: #FF7F2A;
   bottom: 0;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
 }
+
+.progress__open .status svg{
+  margin-top: 32px;
+}
+
+.progress__open .status svg,
+.progress__open .status p {
+  position: relative;
+  z-index: 1;
+  animation-name: zoomIn;
+  animation-fill-mode: both;
+  animation-duration: 0.32s;
+  animation-timing-function: ease-out;
+}
+
+.progress__open .status {
+  display: flex;
+}
+
+.progress .background {
+  background-color: #FF7F2A;
+  width: 20px;
+  height: 20px;
+  border-radius: 16px;
+}
+
+.progress__open .background {
+  animation-name: zoomInCircle;
+  animation-fill-mode: both;
+  animation-duration: 0.32s;
+  animation-timing-function: ease-out;
+}
+
+
 
 .modal .status .first,
 .modal .status .second,
@@ -304,14 +375,45 @@ button.button {
     transform: translateY(0px);
   }
 }
-@keyframes semiFadeOut {
+@keyframes zoomInCircle {
   0% {
-    opacity:1
-  }
-  50% {
-    opacity:0.2
+    transform: scale3d(0,0,0);
   }
   100% {
-    opacity:1
+    transform: scale3d(30,30,10);
+  }
+}
+@keyframes zoomInIllustration {
+  0% {
+    transform: scale3d(0,0,0);
+    border-radius: 999px;
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  100% {
+    border-radius: 0px;
+    opacity: 1;
+  }
+}
+@keyframes insertPaper {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(65px);
+  }
+  100% {
+    transform: translateY(50px);
+  }
+}
+@keyframes feedbackBump {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(25px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
