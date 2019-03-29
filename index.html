@@ -61,14 +61,33 @@
           </form>
           <div class="progress">
             <div class="illustration">
+              <svg class="envelope-path" width="360" height="91" viewBox="0 0 360 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M396.5 3C363 44.5 291.457 69.4606 252.827 78.5013C158.827 100.5 151.705 59.5009 158.827 40.5013C163.18 28.8855 172.827 23.1676 186.827 25.5013C198.632 27.4693 206.115 38.5543 206.827 50.5016C207.768 66.3139 198.161 82.5597 182.327 83.0013C109.5 97 16.5 97.5 -49 0.5" stroke="#CDCDCD" stroke-linecap="round" stroke-dasharray="2 4"/>
+              </svg>
+                
+              <svg class="flying-envelope" width="27" height="15" viewBox="0 0 27 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24.171 14.1679C25.5769 11.12 26.1098 9.35201 26.3605 5.99787L2.48352 0L0 7.69132C9.21575 11.0635 14.516 12.435 24.171 14.1679Z" fill="url(#paint0_linear)"/>
+                <defs>
+                <linearGradient id="paint0_linear" x1="24" y1="5" x2="5.44789e-07" y2="8.5" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#E77428"/>
+                <stop offset="1" stop-color="#B64C06" stop-opacity="0.59"/>
+                </linearGradient>
+                </defs>
+              </svg>
+                
               <svg class="surat" width="216" height="213" viewBox="0 0 216 213" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="amplop" d="M28 79L108 28.5L188 79V79.5H28V79Z" fill="#CDCDCD"/>
+                <g class="bibir-amplop back">
+                  <path class="amplop" d="M28 79L108 28.5L188 79V79.5H28V79Z" fill="#CDCDCD"/>
+                </g>
                 <path class="amplop" d="M28 79.5H188V183C188 184.105 187.105 185 186 185H30C28.8954 185 28 184.105 28 183V79.5Z" fill="#CDCDCD"/>
                 <rect class="message" x="62" y="32" width="92" height="103" fill="white"/>
                 <path class="message" d="M108 99C116.284 99 123 92.2843 123 84C123 75.7157 116.284 69 108 69C99.7157 69 93 75.7157 93 84C93 92.2843 99.7157 99 108 99Z" fill="#FFCC00"/>
                 <path class="message" d="M107.997 84C105.356 84.0038 102.762 84.6987 100.476 86.015C98.1891 87.3313 96.2904 89.2228 94.9697 91.5C96.2903 93.7771 98.1891 95.6686 100.476 96.9849C102.762 98.3013 105.356 98.9962 107.997 99C110.639 98.9972 113.234 98.3028 115.522 96.9864C117.81 95.67 119.709 93.7779 121.03 91.5C119.709 89.222 117.81 87.3299 115.522 86.0135C113.234 84.6972 110.639 84.0028 107.997 84V84Z" fill="#FF7F2A"/>
                 <path class="amplop" d="M28 80L108 130.5L28 181V80Z" fill="#EB7527"/>
                 <path class="amplop" d="M28 181L188 80V183C188 184.105 187.105 185 186 185H30C28.8954 185 28 184.105 28 183V181Z" fill="#FF7F2A"/>
+                <g class="bibir-amplop front">
+                  <path class="amplop" d="M28 79L108 28.5L188 79V79.5H28V79Z" fill="#CDCDCD"/>
+                </g>
               </svg>
               <div class="clouds">
                 <svg class="top cloud" width="164" height="44" viewBox="0 0 164 44" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -112,6 +131,7 @@
         </div>
       </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
     <script src="scripts.js"></script>
   </body>
 </html>

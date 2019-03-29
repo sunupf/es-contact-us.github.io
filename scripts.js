@@ -38,6 +38,7 @@ modalContact.addEventListener('click', function(e) {
 contactUsSubmit.addEventListener('submit',function(e) {
   var contactProgress = document.querySelector('#contact-us .progress');
   contactProgress.classList.add('progress__open');
+  setTimeout(startSending,2000)
   e.preventDefault();
 })
 
@@ -63,3 +64,19 @@ inputs.forEach(function(input) {
     }
   });
 })
+
+function startSending() {
+  var envelope = document.querySelector('.flying-envelope');
+  envelope.styles.display = "block";
+  var path = anime.path('.envelope-path path');
+
+  anime({
+    targets: '.flying-envelope',
+    translateX: path('x'),
+    translateY: path('y'),
+    rotate: path('angle'),
+    easing: 'linear',
+    duration: 10000,
+    loop: true
+  });
+}
